@@ -1,0 +1,11 @@
+body {
+  margin: 0px;
+  padding: 0px;
+}
+.homeWrapper {
+  display: flex;
+  justify-content: space-around;
+  background-color: mediumslateblue;
+  width: 100%;
+  height: 100vh;
+}

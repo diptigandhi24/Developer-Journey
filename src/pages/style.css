@@ -1,0 +1,15 @@
+.button-fire {
+  background-image: url("./img/fire.png");
+  background-size: contain;
+  background-color: transparent;
+  background-repeat: no-repeat no-repeat;
+  background-position-x: center;
+  background-position-y: -28px;
+  width: fit-content;
+  height: fit-content;
+  padding: 50px;
+  border: 0px;
+  color: white;
+  font-size: 18px;
+  font-weight: 800;
+}
