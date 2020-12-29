@@ -3,7 +3,10 @@ import "./homepage.css"
 import { Snowfall, Snowflake } from "react-snowflakes"
 import howlTurnip from "./img/HowlTurnip.png"
 export default function HomePage() {
-  const customWidth = window.screen.width
+  let customWidth
+  if (!window) {
+    customWidth = window.screen.width
+  }
   console.log("Browser width", customWidth)
   return (
     <div
