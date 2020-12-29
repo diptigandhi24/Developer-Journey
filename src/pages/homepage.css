@@ -3,9 +3,7 @@ body {
   padding: 0px;
 }
 .homeWrapper {
-  display: flex;
-  justify-content: space-around;
-  background-color: mediumslateblue;
-  width: 100%;
+  display: block;
   height: 100vh;
+  width: 100%;
 }
