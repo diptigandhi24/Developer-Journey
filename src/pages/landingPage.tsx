@@ -17,28 +17,30 @@ const LandingPage = (): JSX.Element => {
     config: { duration: 1500 },
     reset: true,
   })
-  return (
-    <animated.div
-      key={1}
-      className="script-bf-box"
-      style={{
-        transform: radians.interpolate(interp()),
-        display: "inline-block",
-      }}
-    >
-      <img src={howlTurnip} />
-      <h1
+  if (howlTurnip !== undefined) {
+    return (
+      <animated.div
+        key={1}
+        className="script-bf-box"
         style={{
-          position: "absolute",
-          top: "15%",
-          left: "10%",
-          color: "white",
+          transform: radians.interpolate(interp()),
+          display: "inline-block",
         }}
       >
-        Hi There!!
-      </h1>
-    </animated.div>
-  )
+        <img src={howlTurnip} />
+        <h1
+          style={{
+            position: "absolute",
+            top: "15%",
+            left: "10%",
+            color: "white",
+          }}
+        >
+          Hi There!!
+        </h1>
+      </animated.div>
+    )
+  }
 }
 
 export default LandingPage
