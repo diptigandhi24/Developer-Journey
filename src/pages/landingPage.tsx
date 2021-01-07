@@ -4,6 +4,7 @@ import { useSpring, animated } from "react-spring"
 
 const interp = () => r =>
   `translate3d(0, ${30 * Math.sin(r + (2 * Math.PI) / 1.6)}px, 0)`
+
 const LandingPage = (): JSX.Element => {
   const { radians } = useSpring({
     to: async next => {
@@ -17,7 +18,8 @@ const LandingPage = (): JSX.Element => {
     config: { duration: 1500 },
     reset: true,
   })
-  if (howlTurnip !== undefined) {
+  const [isImageLoaded, setLoaded] = React.useState(false)
+  if (isImageLoaded) {
     return (
       <animated.div
         key={1}
@@ -27,7 +29,7 @@ const LandingPage = (): JSX.Element => {
           display: "inline-block",
         }}
       >
-        <img src={howlTurnip} />
+        <img src={howlTurnip} onLoad={() => setLoaded(true)} />
         <h1
           style={{
             position: "absolute",
@@ -40,6 +42,8 @@ const LandingPage = (): JSX.Element => {
         </h1>
       </animated.div>
     )
+  } else {
+    ;<div>"Hello World</div>
   }
 }
 
