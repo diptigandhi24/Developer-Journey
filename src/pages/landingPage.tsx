@@ -20,7 +20,7 @@ const LandingPage = (): JSX.Element => {
   })
   const [isImageLoaded, setLoaded] = React.useState(false)
   return (
-    <div style={{ width: "100%", height: "80vh" }}>
+    <div style={{ width: "100%", height: "50vh" }}>
       <animated.div
         key={1}
         className="script-bf-box"
