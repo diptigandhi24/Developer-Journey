@@ -27,9 +27,10 @@ const LandingPage = (): JSX.Element => {
         style={{
           transform: radians.interpolate(interp()),
           display: "inline-block",
+          visibility: isImageLoaded ? "visible" : "hidden",
         }}
       >
-        <div style={{ visibility: isImageLoaded ? "visible" : "hidden" }}>
+        <div style={{}}>
           <img src={howlTurnip} onLoad={() => setLoaded(true)} />
           <h1
             style={{
