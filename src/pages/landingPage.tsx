@@ -20,29 +20,35 @@ const LandingPage = (): JSX.Element => {
   })
   const [isImageLoaded, setLoaded] = React.useState(false)
   return (
-    <animated.div
-      key={1}
-      className="script-bf-box"
-      style={{
-        transform: radians.interpolate(interp()),
-        display: "inline-block",
-      }}
-    >
-      <div style={{ visibility: isImageLoaded ? "visible" : "hidden" }}>
-        <img src={howlTurnip} onLoad={() => setLoaded(true)} />
-        <h1
-          style={{
-            position: "absolute",
-            top: "15%",
-            left: "10%",
-            color: "white",
-          }}
-        >
-          Hi There!!
-        </h1>
-      </div>
-      {!isImageLoaded && <div>Hello world</div>}
-    </animated.div>
+    <div style={{ width: "100%", height: "80vh" }}>
+      <animated.div
+        key={1}
+        className="script-bf-box"
+        style={{
+          transform: radians.interpolate(interp()),
+          display: "inline-block",
+        }}
+      >
+        <div style={{ visibility: isImageLoaded ? "visible" : "hidden" }}>
+          <img src={howlTurnip} onLoad={() => setLoaded(true)} />
+          <h1
+            style={{
+              position: "absolute",
+              top: "15%",
+              left: "10%",
+              color: "white",
+            }}
+          >
+            Hi There!!
+          </h1>
+        </div>
+      </animated.div>
+      {!isImageLoaded && (
+        <div>
+          <h1>Hello world</h1>
+        </div>
+      )}
+    </div>
   )
 }
 
