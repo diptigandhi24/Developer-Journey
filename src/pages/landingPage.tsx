@@ -28,7 +28,7 @@ const LandingPage = (): JSX.Element => {
         display: "inline-block",
       }}
     >
-      <div style={{ display: isImageLoaded ? "visible" : "hidden" }}>
+      <div style={{ visibility: isImageLoaded ? "visible" : "hidden" }}>
         <img src={howlTurnip} onLoad={() => setLoaded(true)} />
         <h1
           style={{
