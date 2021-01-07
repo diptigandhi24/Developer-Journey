@@ -43,7 +43,7 @@ const LandingPage = (): JSX.Element => {
       </animated.div>
     )
   } else {
-    ;<div>"Hello World</div>
+    return <div>"Hello World</div>
   }
 }
 

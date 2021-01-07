@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Hello World</h1>
+    <script>
+      interface Eater {
+        eat: () => void;
+      }
+
+      interface Speaker {
+        speak: () => void;
+      }
+
+      interface Cleanable {
+        clean: () => void;
+      }
+
+      class Dog implements Eater, Speaker {
+        eat: () => {}
+        run: () => {}
+        speak: () => {}
+      }
+
+      class Cat implements Eater, Speaker {
+        eat = function () {
+          console.log("Cat eat")
+        }
+        run = function () {
+          console.log("Cat runs")
+        }
+        speak = function () {
+          console.log("Cat meows")
+        }
+      }
+
+      class AnimalShelter {
+        feed(eater: Eater) {
+          eater.eat()
+        }
+
+        // function takeForAWalk(params:type) {
+
+        // }
+
+        listenTo(params: Speaker) {}
+      }
+
+      var d = new Dog()
+      var ash = new AnimalShelter()
+
+      ash.feed(d)
+      ash.feed(new Cat())
+    </script>
+  </body>
+</html>

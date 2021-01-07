@@ -14,6 +14,7 @@ export default function Home() {
         height: "100vh",
         verticalAlign: "middle",
         padding: "40px",
+        width: "100wh",
       }}
     >
       <LandingPage />
