@@ -31,7 +31,13 @@ const LandingPage = (): JSX.Element => {
         }}
       >
         <div style={{}}>
-          <img src={howlTurnip} onLoad={() => setLoaded(true)} />
+          <img
+            src={howlTurnip}
+            onLoad={() => {
+              console.log("Image is loaded", isImageLoaded)
+              setLoaded(true)
+            }}
+          />
           <h1
             style={{
               position: "absolute",
