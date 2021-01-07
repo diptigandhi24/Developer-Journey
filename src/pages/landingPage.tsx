@@ -19,16 +19,16 @@ const LandingPage = (): JSX.Element => {
     reset: true,
   })
   const [isImageLoaded, setLoaded] = React.useState(false)
-  if (isImageLoaded) {
-    return (
-      <animated.div
-        key={1}
-        className="script-bf-box"
-        style={{
-          transform: radians.interpolate(interp()),
-          display: "inline-block",
-        }}
-      >
+  return (
+    <animated.div
+      key={1}
+      className="script-bf-box"
+      style={{
+        transform: radians.interpolate(interp()),
+        display: "inline-block",
+      }}
+    >
+      <div style={{ display: isImageLoaded ? "visible" : "hidden" }}>
         <img src={howlTurnip} onLoad={() => setLoaded(true)} />
         <h1
           style={{
@@ -40,11 +40,10 @@ const LandingPage = (): JSX.Element => {
         >
           Hi There!!
         </h1>
-      </animated.div>
-    )
-  } else {
-    return <div>"Hello World</div>
-  }
+      </div>
+      {!isImageLoaded && <div>Hello world</div>}
+    </animated.div>
+  )
 }
 
 export default LandingPage
