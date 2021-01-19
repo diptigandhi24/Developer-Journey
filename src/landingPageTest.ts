@@ -86,5 +86,6 @@ export default function loadImage(source: string): Resource<string> {
   cache.set(source, resource)
   console.log("Resource is ", resource)
   // and return return it
+  if (!resource) return null
   return resource
 }
