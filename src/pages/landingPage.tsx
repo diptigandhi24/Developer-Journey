@@ -1,7 +1,11 @@
 import React from "react"
 import howlTurnip from "./img/HowlTurnip.png"
 import { useSpring, animated } from "react-spring"
+import loadImage from "./landingPageTest"
 
+function HoldSpace() {
+  return <h1>HelloWorld</h1>
+}
 const interp = () => r =>
   `translate3d(0, ${30 * Math.sin(r + (2 * Math.PI) / 1.6)}px, 0)`
 
@@ -19,6 +23,8 @@ const LandingPage = (): JSX.Element => {
     reset: true,
   })
   const [isImageLoaded, setLoaded] = React.useState(false)
+  let testImage = loadImage(howlTurnip)
+  console.log("Return Value of onloadImage function", testImage.read())
   return (
     <div style={{ width: "100%", height: "50vh" }}>
       <animated.div
@@ -32,7 +38,7 @@ const LandingPage = (): JSX.Element => {
       >
         <div style={{}}>
           <img
-            src={howlTurnip}
+            src={testImage.read()}
             onLoad={() => {
               console.log("Image is loaded", isImageLoaded)
               setLoaded(true)
