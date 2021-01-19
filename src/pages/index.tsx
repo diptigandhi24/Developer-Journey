@@ -11,37 +11,41 @@ function HoldSpace() {
 
 export default function Home() {
   console.log("Index")
-
+  const isSSR = typeof window === "undefined"
   return (
-    <React.Suspense fallback={<HoldSpace />}>
-      <div
-        style={{
-          backgroundColor: "#fd6c9e",
-          textAlign: "center",
-          height: "100vh",
-          verticalAlign: "middle",
-          padding: "40px",
-          width: "100wh",
-        }}
-      >
-        <LandingPage />
-        <h2> I am your guide for your developer journey!!</h2>
-        <h3>
-          I have never code before, but the person who made this website has
-          sometips to help you :p
-        </h3>
+    <>
+      {!isSSR && (
+        <React.Suspense fallback={<HoldSpace />}>
+          <div
+            style={{
+              backgroundColor: "#fd6c9e",
+              textAlign: "center",
+              height: "100vh",
+              verticalAlign: "middle",
+              padding: "40px",
+              width: "100wh",
+            }}
+          >
+            <LandingPage />
+            <h2> I am your guide for your developer journey!!</h2>
+            <h3>
+              I have never code before, but the person who made this website has
+              sometips to help you :p
+            </h3>
 
-        {/* <Link to="/homePage/"> */}
-        <button
-          className={"button-fire"}
-          onClick={() => {
-            navigate("/homePage")
-          }}
-        >
-          Let's Begin
-        </button>
-        {/* </Link> */}
-      </div>
-    </React.Suspense>
+            {/* <Link to="/homePage/"> */}
+            <button
+              className={"button-fire"}
+              onClick={() => {
+                navigate("/homePage")
+              }}
+            >
+              Let's Begin
+            </button>
+            {/* </Link> */}
+          </div>
+        </React.Suspense>
+      )}
+    </>
   )
 }
