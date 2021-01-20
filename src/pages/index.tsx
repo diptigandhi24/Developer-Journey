@@ -6,7 +6,11 @@ import { navigate } from "gatsby"
 const LandingPage = React.lazy(() => import("./landingPage"))
 
 function HoldSpace() {
-  return <h1>HelloWorld</h1>
+  return (
+    <div className="rainbowWrapper">
+      <h1 className="rainbow-text letter">Hello World...</h1>
+    </div>
+  )
 }
 
 export default function Home() {

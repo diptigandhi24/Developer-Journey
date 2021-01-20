@@ -19,8 +19,8 @@ const LandingPage = (): JSX.Element => {
     config: { duration: 1500 },
     reset: true,
   })
-
-  let testImage = loadImage(howlTurnip)
+  let test = "hello"
+  let testImage = loadImage(test)
   const isSSR = typeof window === "undefined"
 
   return (
