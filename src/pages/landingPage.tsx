@@ -2,7 +2,9 @@ import React from "react"
 import howlTurnip from "./img/HowlTurnip.png"
 import { useSpring, animated } from "react-spring"
 import loadImage from "../landingPageTest"
-
+import "./style.css"
+import { Link } from "gatsby"
+import { navigate } from "gatsby"
 const interp = () => r =>
   `translate3d(0, ${30 * Math.sin(r + (2 * Math.PI) / 1.6)}px, 0)`
 
@@ -49,6 +51,21 @@ const LandingPage = (): JSX.Element => {
               </h1>
             </div>
           </animated.div>
+          <h2> I am your guide for your developer journey!!</h2>
+          <h3>
+            I have never code before, but the person who made this website has
+            sometips to help you :p
+          </h3>
+
+          <button
+            className={"button-fire"}
+            onClick={() => {
+              navigate("/homePage")
+            }}
+            type="button"
+          >
+            Let's Begin
+          </button>
         </div>
       )}
     </>

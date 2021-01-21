@@ -1,3 +1,9 @@
+body,
+h1,
+h2 {
+  margin: 0;
+  padding: 0;
+}
 .button-fire {
   background-image: url("./img/fire.png");
   background-size: contain;
@@ -15,21 +21,14 @@
 }
 .rainbowWrapper {
   text-align: center;
+  line-height: 100vh;
+  vertical-align: middle;
 }
 .letter {
-  font-size: 30vh;
+  font-size: 10vw;
   font-weight: 800;
 }
-p.letter[--nth-letter="1"] {
-  color: red;
-  background: yellow;
-}
-p.letter[--nth-letter="2"] {
-  color: green;
-}
-h1.letter[--nth-letter="1"] {
-  background: red;
-}
+
 .rainbow-text {
   background-image: linear-gradient(
     to left,
@@ -41,6 +40,9 @@ h1.letter[--nth-letter="1"] {
     orange,
     red
   );
+  background-position: 0px 0px;
+
+  background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
 }
