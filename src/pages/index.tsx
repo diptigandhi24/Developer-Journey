@@ -11,9 +11,7 @@ const LandingPage = React.lazy(() => {
 function HoldSpace() {
   return (
     <div className="rainbowWrapper">
-      <h1 className="rainbow-text letter" data-text="Hello World...">
-        Hello World...
-      </h1>
+      <h1 className="rainbow-text letter">Hello World...</h1>
     </div>
   )
 }
