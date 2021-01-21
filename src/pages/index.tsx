@@ -10,7 +10,13 @@ const LandingPage = React.lazy(() => {
 
 function HoldSpace() {
   return (
-    <div className="rainbowWrapper">
+    <div
+      style={{
+        textAlign: "center",
+        lineHeight: "100vh",
+        verticalAlign: "middle",
+      }}
+    >
       <h1
         className="rainbow-text letter"
         style={{
