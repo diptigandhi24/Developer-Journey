@@ -18,7 +18,6 @@ function HoldSpace() {
       }}
     >
       <h1
-        className="rainbow-text letter"
         style={{
           fontSize: "10vw",
           fontWeight: 800,
