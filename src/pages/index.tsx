@@ -11,7 +11,28 @@ const LandingPage = React.lazy(() => {
 function HoldSpace() {
   return (
     <div className="rainbowWrapper">
-      <h1 className="rainbow-text letter">Hello World...</h1>
+      <h1
+        className="rainbow-text letter"
+        style={{
+          fontSize: "10vw",
+          fontWeight: 800,
+          backgroundImage: `linear-gradient(
+    to left,
+    violet,
+    indigo,
+    blue,
+    green,
+    yellow,
+    orange,
+    red
+  )`,
+          backgroundClip: `text`,
+          // -webkit-background-clip": "text",
+          color: "transparent",
+        }}
+      >
+        Hello World...
+      </h1>
     </div>
   )
 }
