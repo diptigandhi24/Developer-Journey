@@ -22,19 +22,18 @@ function HoldSpace() {
         style={{
           fontSize: "10vw",
           fontWeight: 800,
-          backgroundImage: `linear-gradient(
-    to left,
-    violet,
-    indigo,
-    blue,
-    green,
-    yellow,
-    orange,
-    red
-  )`,
           backgroundClip: `text`,
           // -webkit-background-clip": "text",
-          color: "transparent",
+          color: `linear-gradient(
+            to left,
+            violet,
+            indigo,
+            blue,
+            green,
+            yellow,
+            orange,
+            red
+          )`,
         }}
       >
         Hello World...
