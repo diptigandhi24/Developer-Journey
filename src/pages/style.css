@@ -19,6 +19,9 @@ h2 {
   font-size: 18px;
   font-weight: 800;
 }
+.turnip-size {
+  height: 50vh;
+}
 .rainbowWrapper {
   text-align: center;
   line-height: 100vh;

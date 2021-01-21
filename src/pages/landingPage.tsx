@@ -28,7 +28,14 @@ const LandingPage = (): JSX.Element => {
   return (
     <>
       {!isSSR && (
-        <div style={{ width: "100%", height: "50vh" }}>
+        <div
+          style={{
+            height: "100vh",
+            backgroundColor: "#fd6c9e",
+            textAlign: "center",
+            padding: "5vh 10px 0px 10px",
+          }}
+        >
           <animated.div
             key={1}
             className="script-bf-box"
@@ -37,19 +44,18 @@ const LandingPage = (): JSX.Element => {
               display: "inline-block",
             }}
           >
-            <div style={{}}>
-              <img src={testImage.read()} />
-              <h1
-                style={{
-                  position: "absolute",
-                  top: "15%",
-                  left: "10%",
-                  color: "white",
-                }}
-              >
-                Hi There!!
-              </h1>
-            </div>
+            <img src={testImage.read()} className="turnip-size" />
+            <h1
+              style={{
+                position: "absolute",
+                top: "15%",
+                left: "10%",
+                color: "white",
+                fontSize: "3vh",
+              }}
+            >
+              Hi There!!
+            </h1>
           </animated.div>
           <h2> I am your guide for your developer journey!!</h2>
           <h3>

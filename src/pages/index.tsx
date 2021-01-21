@@ -25,18 +25,7 @@ export default function Home() {
     <>
       {!isSSR && (
         <React.Suspense fallback={<HoldSpace />}>
-          <div
-            style={{
-              backgroundColor: "#fd6c9e",
-              textAlign: "center",
-              height: "100vh",
-              verticalAlign: "middle",
-              padding: "40px",
-              width: "100wh",
-            }}
-          >
-            <LandingPage />
-          </div>
+          <LandingPage />
         </React.Suspense>
       )}
     </>
