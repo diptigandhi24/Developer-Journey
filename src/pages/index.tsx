@@ -7,7 +7,23 @@ const LandingPage = React.lazy(() => {
     new Promise(resolve => setTimeout(resolve, 1000)),
   ]).then(([moduleExports]) => moduleExports)
 })
-
+const loadingHW = {
+  fontSize: "10vw",
+  fontWeight: 800,
+  backgroundImage: `linear-gradient(
+    to left,
+    violet,
+    indigo,
+    blue,
+    green,
+    yellow,
+    orange,
+    red
+  )`,
+  backgroundClip: `text`,
+  WebkitBackgroundClip: "text",
+  color: "transparent",
+}
 function HoldSpace() {
   return (
     <div
@@ -17,26 +33,7 @@ function HoldSpace() {
         verticalAlign: "middle",
       }}
     >
-      <h1
-        style={{
-          fontSize: "10vw",
-          fontWeight: 800,
-          backgroundClip: `text`,
-          // -webkit-background-clip": "text",
-          color: `linear-gradient(
-            to left,
-            violet,
-            indigo,
-            blue,
-            green,
-            yellow,
-            orange,
-            red
-          )`,
-        }}
-      >
-        Hello World...
-      </h1>
+      <h1 style={loadingHW}>Hello World...</h1>
     </div>
   )
 }
